@@ -4,18 +4,14 @@
 
 #include "Window.h"
 #include <iostream>
+#include <sstream>
 
-static unsigned long x=123456789, y=362436069, z=521288629;
 // https://stackoverflow.com/questions/1640258/need-a-fast-random-generator-for-c
+static unsigned long x=123456789, y=362436069, z=521288629;
 unsigned long xorshf96(void) {          //period 2^96-1
     unsigned long t;
-    x ^= x << 16;
-    x ^= x >> 5;
-    x ^= x << 1;
-    t = x;
-    x = y;
-    y = z;
-    z = t ^ x ^ y;
+    x ^= x << 16; x ^= x >> 5; x ^= x << 1;
+    t = x;  x = y;  y = z;  z = t ^ x ^ y;
     return z;
 }
 
@@ -36,21 +32,11 @@ void Window::render() {
 
     for(int i = 0; i < (width * height * 3) / 8; i++) {
         ((unsigned long*)frameBuffer)[i] = xorshf96();
-        //((unsigned long*)frameBuffer)[i] = 0xffffffffffffffff;
     }
 
     // render the texture here
-    glTexImage2D (
-            GL_TEXTURE_2D,
-            0,
-            GL_RGB,
-            width,
-            height,
-            0,
-            GL_RGB,
-            GL_UNSIGNED_BYTE,
-            frameBuffer
-    );
+    glTexImage2D (GL_TEXTURE_2D,0,GL_RGB, width, height,
+            0, GL_RGB, GL_UNSIGNED_BYTE, frameBuffer );
 
     glBegin(GL_QUADS);
     glTexCoord2f(0.0f, 0.0f); glVertex2f(-1.0, -1.0);
@@ -71,9 +57,11 @@ int Window::loop() {
     glfwPollEvents();
 
     auto frameEnd = std::chrono::steady_clock::now();
-    std::cout << "Frame Time: " <<
-    std::chrono::duration_cast<std::chrono::milliseconds>(frameEnd - previousFrameEnd).count()
-    << "ms" << std::endl;
+    auto elapsedUs = std::chrono::duration_cast<std::chrono::microseconds >(frameEnd - previousFrameEnd).count();
+    std::stringstream ss;
+    ss << "FPS: " << 1000000 / elapsedUs;
+    glfwSetWindowTitle(window, ss.str().c_str());
+
     previousFrameEnd = frameEnd;
     return 0;
 }
