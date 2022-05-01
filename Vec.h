@@ -82,6 +82,7 @@ private:
 public:
     Vec3() : Vec<3>{{0,0,0}} {}
     Vec3(float x, float y, float z) : Vec<3>{{x,y,z}} {}
+    Vec3(Vec<3> in) : Vec<3>{in[xPos], in[yPos], in[zPos]} {}
     float x() const {return components[xPos];}
     float y() const {return components[yPos];}
     float z() const {return components[zPos];}

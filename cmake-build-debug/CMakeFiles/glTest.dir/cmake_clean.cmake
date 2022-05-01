@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/glTest.dir/Hittable.cpp.o"
+  "CMakeFiles/glTest.dir/Hittable.cpp.o.d"
   "CMakeFiles/glTest.dir/Pixel.cpp.o"
   "CMakeFiles/glTest.dir/Pixel.cpp.o.d"
   "CMakeFiles/glTest.dir/Window.cpp.o"

@@ -117,24 +117,72 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named glTest
+# Target rules for targets named rayTracerMK3
 
 # Build rule for target.
-glTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glTest
-.PHONY : glTest
+rayTracerMK3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rayTracerMK3
+.PHONY : rayTracerMK3
 
 # fast build rule for target.
-glTest/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/glTest.dir/build.make CMakeFiles/glTest.dir/build
-.PHONY : glTest/fast
+rayTracerMK3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayTracerMK3.dir/build.make CMakeFiles/rayTracerMK3.dir/build
+.PHONY : rayTracerMK3/fast
+
+Collision.o: Collision.cpp.o
+.PHONY : Collision.o
+
+# target to build an object file
+Collision.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayTracerMK3.dir/build.make CMakeFiles/rayTracerMK3.dir/Collision.cpp.o
+.PHONY : Collision.cpp.o
+
+Collision.i: Collision.cpp.i
+.PHONY : Collision.i
+
+# target to preprocess a source file
+Collision.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayTracerMK3.dir/build.make CMakeFiles/rayTracerMK3.dir/Collision.cpp.i
+.PHONY : Collision.cpp.i
+
+Collision.s: Collision.cpp.s
+.PHONY : Collision.s
+
+# target to generate assembly for a file
+Collision.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayTracerMK3.dir/build.make CMakeFiles/rayTracerMK3.dir/Collision.cpp.s
+.PHONY : Collision.cpp.s
+
+Hittable.o: Hittable.cpp.o
+.PHONY : Hittable.o
+
+# target to build an object file
+Hittable.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayTracerMK3.dir/build.make CMakeFiles/rayTracerMK3.dir/Hittable.cpp.o
+.PHONY : Hittable.cpp.o
+
+Hittable.i: Hittable.cpp.i
+.PHONY : Hittable.i
+
+# target to preprocess a source file
+Hittable.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayTracerMK3.dir/build.make CMakeFiles/rayTracerMK3.dir/Hittable.cpp.i
+.PHONY : Hittable.cpp.i
+
+Hittable.s: Hittable.cpp.s
+.PHONY : Hittable.s
+
+# target to generate assembly for a file
+Hittable.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayTracerMK3.dir/build.make CMakeFiles/rayTracerMK3.dir/Hittable.cpp.s
+.PHONY : Hittable.cpp.s
 
 Pixel.o: Pixel.cpp.o
 .PHONY : Pixel.o
 
 # target to build an object file
 Pixel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/glTest.dir/build.make CMakeFiles/glTest.dir/Pixel.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayTracerMK3.dir/build.make CMakeFiles/rayTracerMK3.dir/Pixel.cpp.o
 .PHONY : Pixel.cpp.o
 
 Pixel.i: Pixel.cpp.i
@@ -142,7 +190,7 @@ Pixel.i: Pixel.cpp.i
 
 # target to preprocess a source file
 Pixel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/glTest.dir/build.make CMakeFiles/glTest.dir/Pixel.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayTracerMK3.dir/build.make CMakeFiles/rayTracerMK3.dir/Pixel.cpp.i
 .PHONY : Pixel.cpp.i
 
 Pixel.s: Pixel.cpp.s
@@ -150,15 +198,63 @@ Pixel.s: Pixel.cpp.s
 
 # target to generate assembly for a file
 Pixel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/glTest.dir/build.make CMakeFiles/glTest.dir/Pixel.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayTracerMK3.dir/build.make CMakeFiles/rayTracerMK3.dir/Pixel.cpp.s
 .PHONY : Pixel.cpp.s
+
+Ray.o: Ray.cpp.o
+.PHONY : Ray.o
+
+# target to build an object file
+Ray.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayTracerMK3.dir/build.make CMakeFiles/rayTracerMK3.dir/Ray.cpp.o
+.PHONY : Ray.cpp.o
+
+Ray.i: Ray.cpp.i
+.PHONY : Ray.i
+
+# target to preprocess a source file
+Ray.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayTracerMK3.dir/build.make CMakeFiles/rayTracerMK3.dir/Ray.cpp.i
+.PHONY : Ray.cpp.i
+
+Ray.s: Ray.cpp.s
+.PHONY : Ray.s
+
+# target to generate assembly for a file
+Ray.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayTracerMK3.dir/build.make CMakeFiles/rayTracerMK3.dir/Ray.cpp.s
+.PHONY : Ray.cpp.s
+
+Sphere.o: Sphere.cpp.o
+.PHONY : Sphere.o
+
+# target to build an object file
+Sphere.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayTracerMK3.dir/build.make CMakeFiles/rayTracerMK3.dir/Sphere.cpp.o
+.PHONY : Sphere.cpp.o
+
+Sphere.i: Sphere.cpp.i
+.PHONY : Sphere.i
+
+# target to preprocess a source file
+Sphere.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayTracerMK3.dir/build.make CMakeFiles/rayTracerMK3.dir/Sphere.cpp.i
+.PHONY : Sphere.cpp.i
+
+Sphere.s: Sphere.cpp.s
+.PHONY : Sphere.s
+
+# target to generate assembly for a file
+Sphere.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayTracerMK3.dir/build.make CMakeFiles/rayTracerMK3.dir/Sphere.cpp.s
+.PHONY : Sphere.cpp.s
 
 Window.o: Window.cpp.o
 .PHONY : Window.o
 
 # target to build an object file
 Window.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/glTest.dir/build.make CMakeFiles/glTest.dir/Window.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayTracerMK3.dir/build.make CMakeFiles/rayTracerMK3.dir/Window.cpp.o
 .PHONY : Window.cpp.o
 
 Window.i: Window.cpp.i
@@ -166,7 +262,7 @@ Window.i: Window.cpp.i
 
 # target to preprocess a source file
 Window.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/glTest.dir/build.make CMakeFiles/glTest.dir/Window.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayTracerMK3.dir/build.make CMakeFiles/rayTracerMK3.dir/Window.cpp.i
 .PHONY : Window.cpp.i
 
 Window.s: Window.cpp.s
@@ -174,7 +270,7 @@ Window.s: Window.cpp.s
 
 # target to generate assembly for a file
 Window.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/glTest.dir/build.make CMakeFiles/glTest.dir/Window.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayTracerMK3.dir/build.make CMakeFiles/rayTracerMK3.dir/Window.cpp.s
 .PHONY : Window.cpp.s
 
 main.o: main.cpp.o
@@ -182,7 +278,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/glTest.dir/build.make CMakeFiles/glTest.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayTracerMK3.dir/build.make CMakeFiles/rayTracerMK3.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -190,7 +286,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/glTest.dir/build.make CMakeFiles/glTest.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayTracerMK3.dir/build.make CMakeFiles/rayTracerMK3.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -198,7 +294,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/glTest.dir/build.make CMakeFiles/glTest.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rayTracerMK3.dir/build.make CMakeFiles/rayTracerMK3.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -209,10 +305,22 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... glTest"
+	@echo "... rayTracerMK3"
+	@echo "... Collision.o"
+	@echo "... Collision.i"
+	@echo "... Collision.s"
+	@echo "... Hittable.o"
+	@echo "... Hittable.i"
+	@echo "... Hittable.s"
 	@echo "... Pixel.o"
 	@echo "... Pixel.i"
 	@echo "... Pixel.s"
+	@echo "... Ray.o"
+	@echo "... Ray.i"
+	@echo "... Ray.s"
+	@echo "... Sphere.o"
+	@echo "... Sphere.i"
+	@echo "... Sphere.s"
 	@echo "... Window.o"
 	@echo "... Window.i"
 	@echo "... Window.s"

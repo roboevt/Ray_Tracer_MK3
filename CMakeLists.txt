@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.21)
-project(glTest)
+project(RayTracerMK3)
 
 set(CMAKE_CXX_STANDARD 17)
 if(NOT CMAKE_BUILD_TYPE)
@@ -8,9 +8,9 @@ endif()
 
 set(CMAKE_CXX_FLAGS "-Wall -Wextra")
 set(CMAKE_CXX_FLAGS_DEBUG "-g")
-set(CMAKE_CXX_FLAGS_RELEASE "-O0")
+set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
-add_executable(glTest main.cpp Window.cpp Window.h Vec.h Pixel.h Pixel.cpp)
+add_executable(rayTracerMK3 main.cpp Window.cpp Window.h Vec.h Pixel.h Pixel.cpp Hittable.cpp Hittable.h Collision.cpp Collision.h Ray.cpp Ray.h Sphere.cpp Sphere.h)
 
 find_package(glfw3 REQUIRED )
-target_link_libraries(glTest  GL glfw)
+target_link_libraries(rayTracerMK3  GL glfw)

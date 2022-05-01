@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="glTest"/>
+		<Option title="RayTracerMK3"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\glfw3\;"/>
@@ -37,8 +37,8 @@
 					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/roboevt/dev/c++/RayTracerMK3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="glTest">
-				<Option output="/home/roboevt/dev/c++/RayTracerMK3/cmake-build-debug/glTest" prefix_auto="0" extension_auto="0"/>
+			<Target title="rayTracerMK3">
+				<Option output="/home/roboevt/dev/c++/RayTracerMK3/cmake-build-debug/rayTracerMK3" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/roboevt/dev/c++/RayTracerMK3/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -53,14 +53,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j12 -f &quot;/home/roboevt/dev/c++/RayTracerMK3/cmake-build-debug/Makefile&quot;  VERBOSE=1 glTest"/>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/roboevt/dev/c++/RayTracerMK3/cmake-build-debug/Makefile&quot;  VERBOSE=1 rayTracerMK3"/>
 					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/roboevt/dev/c++/RayTracerMK3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/roboevt/dev/c++/RayTracerMK3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/roboevt/dev/c++/RayTracerMK3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="glTest/fast">
-				<Option output="/home/roboevt/dev/c++/RayTracerMK3/cmake-build-debug/glTest" prefix_auto="0" extension_auto="0"/>
+			<Target title="rayTracerMK3/fast">
+				<Option output="/home/roboevt/dev/c++/RayTracerMK3/cmake-build-debug/rayTracerMK3" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/roboevt/dev/c++/RayTracerMK3/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -75,36 +75,54 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j12 -f &quot;/home/roboevt/dev/c++/RayTracerMK3/cmake-build-debug/Makefile&quot;  VERBOSE=1 glTest/fast"/>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/home/roboevt/dev/c++/RayTracerMK3/cmake-build-debug/Makefile&quot;  VERBOSE=1 rayTracerMK3/fast"/>
 					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/home/roboevt/dev/c++/RayTracerMK3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/gmake -j12 -f &quot;/home/roboevt/dev/c++/RayTracerMK3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/gmake -j12 -f &quot;/home/roboevt/dev/c++/RayTracerMK3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/roboevt/dev/c++/RayTracerMK3/Collision.cpp">
+			<Option target="rayTracerMK3"/>
+		</Unit>
+		<Unit filename="/home/roboevt/dev/c++/RayTracerMK3/Collision.h">
+			<Option target="rayTracerMK3"/>
+		</Unit>
 		<Unit filename="/home/roboevt/dev/c++/RayTracerMK3/Hittable.cpp">
-			<Option target="glTest"/>
+			<Option target="rayTracerMK3"/>
 		</Unit>
 		<Unit filename="/home/roboevt/dev/c++/RayTracerMK3/Hittable.h">
-			<Option target="glTest"/>
+			<Option target="rayTracerMK3"/>
 		</Unit>
 		<Unit filename="/home/roboevt/dev/c++/RayTracerMK3/Pixel.cpp">
-			<Option target="glTest"/>
+			<Option target="rayTracerMK3"/>
 		</Unit>
 		<Unit filename="/home/roboevt/dev/c++/RayTracerMK3/Pixel.h">
-			<Option target="glTest"/>
+			<Option target="rayTracerMK3"/>
+		</Unit>
+		<Unit filename="/home/roboevt/dev/c++/RayTracerMK3/Ray.cpp">
+			<Option target="rayTracerMK3"/>
+		</Unit>
+		<Unit filename="/home/roboevt/dev/c++/RayTracerMK3/Ray.h">
+			<Option target="rayTracerMK3"/>
+		</Unit>
+		<Unit filename="/home/roboevt/dev/c++/RayTracerMK3/Sphere.cpp">
+			<Option target="rayTracerMK3"/>
+		</Unit>
+		<Unit filename="/home/roboevt/dev/c++/RayTracerMK3/Sphere.h">
+			<Option target="rayTracerMK3"/>
 		</Unit>
 		<Unit filename="/home/roboevt/dev/c++/RayTracerMK3/Vec.h">
-			<Option target="glTest"/>
+			<Option target="rayTracerMK3"/>
 		</Unit>
 		<Unit filename="/home/roboevt/dev/c++/RayTracerMK3/Window.cpp">
-			<Option target="glTest"/>
+			<Option target="rayTracerMK3"/>
 		</Unit>
 		<Unit filename="/home/roboevt/dev/c++/RayTracerMK3/Window.h">
-			<Option target="glTest"/>
+			<Option target="rayTracerMK3"/>
 		</Unit>
 		<Unit filename="/home/roboevt/dev/c++/RayTracerMK3/main.cpp">
-			<Option target="glTest"/>
+			<Option target="rayTracerMK3"/>
 		</Unit>
 		<Unit filename="/home/roboevt/dev/c++/RayTracerMK3/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
