@@ -49,6 +49,21 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
+			"path" : "/home/roboevt/Downloads/clion-2021.3.4/bin/cmake/linux/share/cmake-3.21/Modules/CMakeFindCodeBlocks.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/roboevt/Downloads/clion-2021.3.4/bin/cmake/linux/share/cmake-3.21/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/roboevt/Downloads/clion-2021.3.4/bin/cmake/linux/share/cmake-3.21/Modules/ProcessorCount.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
 			"path" : "/home/roboevt/Downloads/clion-2021.3.4/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCInformation.cmake"
 		},
 		{
@@ -141,8 +156,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/roboevt/dev/c++/glTest/cmake-build-debug",
-		"source" : "/home/roboevt/dev/c++/glTest"
+		"build" : "/home/roboevt/dev/c++/RayTracerMK3/cmake-build-debug",
+		"source" : "/home/roboevt/dev/c++/RayTracerMK3"
 	},
 	"version" : 
 	{

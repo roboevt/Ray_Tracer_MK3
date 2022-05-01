@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wall -Wextra -g CMakeFiles/glTest.dir/main.cpp.o CMakeFiles/glTest.dir/Window.cpp.o CMakeFiles/glTest.dir/Pixel.cpp.o -o glTest  -lGL /usr/local/lib/libglfw3.a /usr/lib/x86_64-linux-gnu/librt.a -lm -ldl /usr/lib/x86_64-linux-gnu/libX11.so 

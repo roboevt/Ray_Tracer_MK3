@@ -10,7 +10,7 @@ set(CMAKE_CXX_FLAGS "-Wall -Wextra")
 set(CMAKE_CXX_FLAGS_DEBUG "-g")
 set(CMAKE_CXX_FLAGS_RELEASE "-O0")
 
-add_executable(glTest main.cpp Window.cpp Window.h)
+add_executable(glTest main.cpp Window.cpp Window.h Vec.h Pixel.h Pixel.cpp)
 
 find_package(glfw3 REQUIRED )
 target_link_libraries(glTest  GL glfw)
