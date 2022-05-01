@@ -19,5 +19,4 @@ struct Collision {
     }
 };
 
-
 #endif //RAYTRACERMK3_COLLISION_H
